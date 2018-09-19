@@ -15,6 +15,8 @@
 	box-sizing:border-box;
 }
 
+
+
 .page
 {
 	max-width:1200px;
@@ -76,10 +78,15 @@
 		font-size: 20px;
 		color: #6F6F6F;
 	}
-	a::before 
+	/*a::before 
 	{
 		content: url("../img/call.svg");
 		margin-right: 7px;
+	}*/
+	img 
+	{
+		vertical-align:middle;
+		margin-right:5px;
 	}
 }
 
@@ -97,18 +104,20 @@
 	{	
 		text-decoration:none;
 
-		border-bottom: 1px solid #353535;
+		/*border-bottom: 1px solid #353535;*/
 		font-family: UbuntuBold;
 		font-size: 14px;
 		font-weight: 500;
 		color: #353535;
-
+		border-bottom: 1px solid #353535;
+		img 
+		{
+			
+			border:none;
+		}
 	}
 
-			img 
-		{
-			border: none;
-		}
+
 }
 
 .header-login
@@ -136,12 +145,21 @@
 {
 	display:flex;
 	justify-content:space-between;
+	list-style:none;
+		li
+		{
+		/*display: inline-table;*/
 
-	.nav-link
-	{
+		width:20%;
+		text-align:center;
+		margin:0;
+
 		a 
 		{	
+			padding-top:35px;
+			padding-bottom:35px;
 
+			display:block;
 			text-decoration:none;
 			font-family:ubuntu;
 			font-size:18px;
@@ -154,5 +172,7 @@
 			background-color:#DF362F;
 
 		}
-	}
+	    }
+
+
 }
