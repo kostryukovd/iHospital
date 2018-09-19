@@ -1,0 +1,97 @@
+@font-face {
+  font-family: UbuntuBold;
+  src: url("../fonts/Ubuntu-B.ttf"); }
+
+@font-face {
+  font-family: Ubuntu;
+  src: url("../fonts/Ubuntu-R.ttf"); }
+
+* {
+  box-sizing: border-box; }
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px; }
+
+.header-switch {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.switch-specialists {
+  font-family: UbuntuBold;
+  font-size: 16px;
+  color: #DF362F;
+  margin-right: 5px; }
+
+.switch-line {
+  height: 1px;
+  width: 39px;
+  background-color: #DF362F; }
+
+.switch-patients {
+  font-family: Ubuntu;
+  font-size: 14px;
+  color: #DF362F;
+  border: 1px solid #DF362F;
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px rgba(223, 54, 47, 0.1);
+  padding: 9px 35px; }
+
+.contact-phone a {
+  text-decoration: none;
+  font-family: Ubuntu;
+  font-size: 20px;
+  color: #6F6F6F; }
+
+.contact-phone a::before {
+  content: url("../img/call.svg");
+  margin-right: 7px; }
+
+.header_user-links {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.header-login a, .header-signin a {
+  text-decoration: none;
+  border-bottom: 1px solid #353535;
+  font-family: UbuntuBold;
+  font-size: 14px;
+  font-weight: 500;
+  color: #353535; }
+
+.header-login img, .header-signin img {
+  border: none; }
+
+.header-login {
+  /*a::before
+	{
+		content: url("../img/login.svg")
+	}*/ }
+
+.header-user_divider {
+  background-color: #353535;
+  width: 1px;
+  height: 14px;
+  margin: 0 5px; }
+
+.nav-menu {
+  background-color: #AF4845; }
+
+.nav-links {
+  display: flex;
+  justify-content: space-between; }
+  .nav-links .nav-link a {
+    text-decoration: none;
+    font-family: ubuntu;
+    font-size: 18px;
+    color: white; }
+  .nav-links .nav-link a:hover {
+    background-color: #DF362F; }
