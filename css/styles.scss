@@ -47,6 +47,12 @@ body
 	height:100px;
 }
 
+.header-logo
+{	
+	position:relative;
+	z-index:2;
+}
+
 .header-switch
 {
 	display:flex;
@@ -103,6 +109,11 @@ body
 		vertical-align:middle;
 		margin-right:5px;
 	}
+}
+
+.contact-phone-hidden
+{
+	display:none;
 }
 
 .header_user-links
@@ -238,6 +249,7 @@ body
 	font-size:45px;
 	line-height:56px;
 	margin-bottom:27px;
+	max-width:404px;
 
 
 }
@@ -395,6 +407,12 @@ body
 	.article-text
 	{
 		padding-top:31px;
+		width:100%;
+	}
+
+		.article-footer
+	{
+		padding-top:30px;
 	}
 }
 
@@ -433,16 +451,11 @@ img
 	/*margin-bottom:102px;*/
 	}
 
-	.article-footer-container
-	{		
-			display:flex;
-			margin: auto 0 0 0;
-
-
-	}
+	
 
 	.article-footer
 	{	
+		margin: auto 0 0 0;
 		display:flex;
 		justify-content:space-between;
 		width:100%;
@@ -481,7 +494,6 @@ img
 	display:flex;
 	justify-content:space-between;
 	flex-wrap:wrap;
-		margin-bottom:65px;
 
 }
 
@@ -489,6 +501,7 @@ img
 {
 	text-align:center;
 	margin-bottom:70px;
+	margin-top:65px;
 	p
 	{
 		font-family: UbuntuLight;
@@ -622,9 +635,11 @@ color: #353535;
 		color: #353535;
 		/*border-bottom: 1px solid #353535;*/
 		text-decoration:underline;
+}
 
 
-	}
+
+	
 
 .faq
 {
@@ -650,6 +665,7 @@ padding-bottom:100px;
 .footer
 {
 	display:flex;
+	flex-wrap:wrap;
 }
 
 .footer-img
@@ -674,7 +690,7 @@ padding-bottom:100px;
 			font-family: Ubuntu;
 			line-height: 24px;
 			font-size: 16px;
-			padding-bottom:21px;
+			/*padding-bottom:21px;*/
 			a 
 			{
 				text-decoration:none;
@@ -687,6 +703,10 @@ padding-bottom:100px;
 				text-decoration:underline;
 			}
 		}
+		li:not(:last-child)
+		{
+			padding-bottom:21px;
+		}
 	}
 }
 
@@ -694,6 +714,8 @@ padding-bottom:100px;
 {
 	width:25%;
 	padding-top:51px;
+	display:flex;
+	flex-direction:column;
 }
 
 .footer-address
@@ -712,10 +734,152 @@ padding-bottom:100px;
 	font-size: 12px;
 	color: #8A8A8A;
 	vertical-align:bottom;
+	margin:auto 0 0 0;
+}
+
+.header-menu
+{
+	background-color:#DF362F;
+	height:53px;
+	width:54px;
+	padding: 16px 17px;
+	border-radius:5px;
+	margin-left:12px;
+	z-index:2;
+	display:none;
+
+}
+
+.header-menu:hover
+{
+	cursor:pointer;
 }
 
 
-@media screen and (max-width: 1170px)
+.header-menu__line
+{
+	    width: 20px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    border-radius:2px;
+
+}
+
+.header-menu__lines
+{
+	    transition: all 0.4s;
+	        transition-timing-function:linear;
+
+
+}
+
+.header-menu__lines-rotate
+{
+	transform:rotate(90deg);
+}
+
+.hidden-menu
+{
+	position:absolute;
+	background-color:white;
+	z-index:1;
+	top:0;
+	left:0;
+	display:none;
+	padding-top:100px;
+	padding-bottom:30px;
+	width:460px;
+	box-shadow: 10px 0 79px 0 rgba(53, 53, 53, 0.38);
+}
+
+.hidden-menu__show
+{
+	display:none;
+}
+
+
+.hidden_user-links
+{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin-top:15px;
+
+}
+
+.hidden-login,.hidden-signin
+{
+	a
+	{	
+		text-decoration:none;
+
+		/*border-bottom: 1px solid #353535;*/
+		font-family: UbuntuBold;
+		font-size: 14px;
+		font-weight: 500;
+		color: #353535;
+		padding-bottom:2px;
+		border-bottom: 1px solid #353535;
+		img 
+		{
+			vertical-align:middle;
+			margin-right:5px;
+			border:none;
+		}
+	}
+
+
+}
+
+.hidden-user_divider
+{
+	background-color: #353535;
+	width:1px;
+	height: 14px;
+	margin: 0 5px;
+}
+
+.hidden-menu-links
+{
+	list-style:none;
+		li
+		{
+		/*display: inline-table;*/
+
+		text-align:left;
+		margin:0;
+
+		a 
+		{	
+
+					padding-left:30px;
+
+			padding-top:20px;
+			padding-bottom:20px;
+
+			display:block;
+			text-decoration:none;
+			font-family:ubuntu;
+			font-size:18px;
+			color:#DF362F;
+
+		}
+
+		a:hover
+		{
+			background-color:#DF362F;
+			color:white;
+
+		}
+	    }
+
+
+}
+
+
+
+@media screen and (max-width: 1201px)
 {
 	.article-link:last-child
 	{
@@ -727,14 +891,213 @@ padding-bottom:100px;
 	{
 		margin-bottom:24px;
 	}
+
+	.section-header
+	{
+		padding-left:15px;
+	}
+
+	.faq
+	{
+		padding-left:15px;
+	}
 }
 
-@media screen and (max-width:904px)
+@media screen and (max-width:961px)
 {
 	.article-block-long
 	{
 		flex-direction:column;
+
+		.article-image
+		{
+			img 
+			{
+				width:100%;
+				height:auto;
+			}
+		}
+	}
+
+	.header-switch
+	{
+		display:none;
 	}
 }
 
+@media screen and (max-width:786px)
+{
+	.article-link
+	{
+		width:100%;
+			.article-block
+	{
+		max-width:100%;
+	}
 
+	}
+
+
+
+	.article-image
+	{
+		img 
+		{
+			width:100%;
+			height:auto;
+		}
+	}
+
+	.header-menu,.hidden-menu__show
+	{
+		display:block;
+	}
+
+	.header_user-links,.nav-menu
+	{
+		display:none;
+	}
+
+	.header
+	{
+		border-bottom:2px solid #DF362F;
+	}
+
+	.event-date
+	{
+		margin-right:20px;
+	}
+}
+
+@media screen and (max-width:640px)
+{
+	.contact-phone
+	{
+		display:none;
+	}
+
+	.contact-phone-hidden
+	{
+		display:block;
+		padding-right:30px;
+	}
+
+	.header-logo
+	{
+		width:100%;
+		height:auto;
+	}
+
+	.event-place
+	{
+		display:none;
+	}
+
+	.footer-img
+	{
+		img 
+		{
+			width:100%;
+			height:auto;
+		}
+	}
+
+	.event-footer
+	{
+		flex-direction:column;
+	}
+
+	.footer-contacts
+	{	
+
+		width:100%;
+		align-items:center;
+		/*display:flex;
+		flex-direction:row;
+		justify-content:space-between;*/
+
+	}
+
+	.footer-address
+	{
+		padding-top:15px;
+		text-align:center;
+	}
+
+	.show-more
+	{
+		margin-top:25px;
+		margin-bottom:25px;
+	}
+
+	.section-header
+	{
+		padding-bottom:30px;
+	}
+
+	.iHospital
+	{
+		padding-top:15px;
+		padding-bottom:15px;
+	}
+
+	.faq
+	{
+		padding-bottom:30px;
+	}
+
+}
+
+@media screen and (max-width:460px)
+{
+
+		.banner-header
+	{
+		font-size:28px;
+		line-height:1;
+	}
+
+	.banner-text
+	{
+		font-size:24px;
+	}
+
+	.banner-background
+	{
+		padding-top:30px;
+		padding-bottom:60px;
+	}
+
+			.section-header
+	{
+		font-size:45px;
+	}
+
+	.hidden-menu
+	{
+		width:100%;
+	}
+}
+
+@media screen and (max-width:380px)
+{
+		.section-header
+	{
+		font-size:37px;
+	}
+
+	.event-img
+	{
+		display:none;
+	}
+
+	.footer-img
+	{
+		display:none;
+	}
+
+	.footer-links
+	{
+		width:100%;
+	}
+}

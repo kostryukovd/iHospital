@@ -18,8 +18,22 @@
 
 <div class = "page">
 
-	<div class = "header">
-		<div>
+	<div class = "header" ">
+		<div class = "header-menu" onclick = "expand_menu()">
+			<div class = "header-menu__lines">
+
+				<div class = "header-menu__line">
+				</div>
+				<div class = "header-menu__line">
+				</div>
+				<div class = "header-menu__line">
+				</div>
+			</div>
+		</div>
+
+
+
+		<div header-logo>
 		<a href = #>
 		<img class = "header-logo" src = "img/logo_big.png">
 		</a>
@@ -37,6 +51,10 @@
 
 		<div class = "contact-phone">
 			<a href = "tel:+88005555579"><img class = "pnone-img" src = "img/call.svg">8 (800) 555 55 79</a>
+		</div>
+		<div class = "contact-phone-hidden">
+			<a href = "tel:+88005555579"><img class = "phone-img" src = "img/call.svg">
+			</a>
 		</div>
 
 
@@ -56,6 +74,30 @@
 		</div>
 
 	</div>
+</div>
+
+<div class = "hidden-menu">
+	<ul class = "hidden-menu-links">
+		<li><a href = "">iHospital</a></li>
+		<li><a href = "">СТАТЬИ</a></li>
+		<li><a href = "">ВЕБИНАРЫ</a></li>
+		<li><a href = "">ПРЕПАРАТЫ</a></li>
+		<li><a href = "">МЕРОПРИЯТИЯ</a></li>
+	</ul>
+				<div class = "hidden_user-links">
+			<img src = "img/login.svg" class = "log-img">
+			<div class = "hidden-login">
+				
+				<a href = #>ВХОД</a>
+			</div>
+			<div class = "hidden-user_divider">
+			</div>
+			<img src = "img/signin.svg" class = "log-img">
+			<div class = "hidden-signin">
+				
+				<a href = #>РЕГИСТРАЦИЯ</a>
+			</div>
+		</div>
 </div>
 
 <div class = "nav-menu">
@@ -81,7 +123,7 @@
 <div class = "banner-background">
 	<div class = "page">
 		<h1 class = "banner-header">
-			Совершенствуйте<br>
+			Совершенствуйте
 			знания и навыки
 		</h1>
 		<p class = "banner-text">Обучающий модуль <strong>iHospital</strong> включает:</p>
@@ -113,7 +155,6 @@
 					<p class = "article-intro">
 						Но переливание эритроцитов может быть не первостепенной проблемой при некротическом энтероколите. По данным Рави М. Пателя, д. м. н., врача Университета Эмори в Атланте, и его коллег, в соответствующем анализе...
 					</p>
-					<div class = "article-footer-container">
 					<div class = "article-footer">
 						<p class = "article-date">
 							28 августа 2018
@@ -121,7 +162,6 @@
 						<p class = "article-continue">
 							Подробнее
 						</p>
-					</div>
 					</div>
 				</div>
 			</div>
@@ -373,7 +413,9 @@
 			<img class = "event-img" src = "img/location-mark.svg">
 					Место проведения: Мурманск
 				</span>
+				<span>
 				<img class = "event-img event-float-img" src = "img/event_img.svg">
+			</span>
 			</div>
 
 			<div class = "event-body">
@@ -432,7 +474,9 @@
 			</div>
 
 			<div class = "footer-contacts">
+				<div>
 				<img src = "img/takeda.png">
+			</div>
 				<div class = "footer-address">
 					<p>ООО «Такеда Фармасьютикалс»</p>
 					<p>119048 Москва, ул. Усачёва дом 2, стр.1,</p>
@@ -449,7 +493,8 @@
 
 
 
-
+<script src="js/libs/jquery-3.3.1.min.js"></script>
+<script src="js/main.js"></script>
 
 
 
