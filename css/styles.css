@@ -96,12 +96,6 @@ body {
     margin-right: 5px;
     border: none; }
 
-.header-login {
-  /*a::before
-	{
-		content: url("../img/login.svg")
-	}*/ }
-
 .log-img {
   margin-right: 5px; }
 
@@ -349,11 +343,13 @@ body {
 
 .event-header {
   background-color: #C3C3C3;
-  vertical-align: center;
-  padding: 19px 24px; }
+  /*vertical-align:center;*/
+  /*padding:19px 24px;*/
+  padding: 19px 24px 19px 24px; }
 
 .event-float-img {
-  float: right; }
+  float: right;
+  margin-top: -5px; }
 
 .event-img {
   vertical-align: middle; }
@@ -633,13 +629,13 @@ body {
   .section-header {
     font-size: 45px; }
   .hidden-menu {
-    width: 100%; } }
+    width: 100%; }
+  .event-img {
+    display: none; } }
 
 @media screen and (max-width: 380px) {
   .section-header {
     font-size: 37px; }
-  .event-img {
-    display: none; }
   .footer-img {
     display: none; }
   .footer-links {
