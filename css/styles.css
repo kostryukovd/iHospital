@@ -232,7 +232,8 @@ body {
   letter-spacing: 0.03em;
   padding-top: 10px;
   border-top: 8px solid #AF4845;
-  padding-bottom: 54px; }
+  padding-bottom: 54px;
+  text-transform: uppercase; }
 
 .article-link {
   display: block;
