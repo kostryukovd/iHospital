@@ -1,3 +1,5 @@
+@import 'variables';
+
 @font-face
 {
 	font-family: UbuntuBold;
@@ -43,14 +45,14 @@ body
 	display:flex;
 	justify-content:space-between;
 	align-items:center;
-
-	height:100px;
+	flex-wrap:wrap;
+	min-height:100px;
 }
 
 .header-logo
 {	
 	position:relative;
-	z-index:2;
+	z-index:4;
 }
 
 .header-switch
@@ -114,6 +116,11 @@ body
 .contact-phone-hidden
 {
 	display:none;
+		border-radius:50%;
+	padding:5px;
+	border:2px solid $bright-red;
+	//margin:0 auto;
+
 }
 
 .header_user-links
@@ -183,8 +190,8 @@ body
 
 		a 
 		{	
-			padding-top:35px;
-			padding-bottom:35px;
+			padding-top:15px;
+			padding-bottom:15px;
 
 			display:block;
 			text-decoration:none;
@@ -233,7 +240,16 @@ body
 	padding-bottom:98px;
 	padding-left:15px;
 	margin-bottom:72px;
+	position:relative;
+	z-index:2;
 
+}
+
+.blood1 {
+	position:absolute;
+	bottom:-61px;
+	left:5%;
+	z-index:0;
 }
 
 .banner-header
@@ -291,7 +307,25 @@ body
 .section
 {
 	border-top:2px solid #AF4845;
+	position:relative;
+	z-index:2;
 }
+
+
+.blood2 {
+	position:absolute;
+	right:5%;
+	top:412px;
+	z-index:-1;
+}
+
+.blood3 {
+	position:absolute;
+	left:-10%;
+	bottom:70px;
+	z-index:-1;
+}
+
 
 .section-header
 {	
@@ -658,6 +692,15 @@ padding-bottom:100px;
 {
 	background-color:white;
 	padding-bottom:21px;
+	position:relative;
+	z-index:2;
+}
+
+.blood4 {
+	position:absolute;
+	z-index:0;
+	right:5%;
+	top:-211px;
 }
 
 .footer
@@ -743,7 +786,7 @@ padding-bottom:100px;
 	padding: 16px 17px;
 	border-radius:5px;
 	margin-left:12px;
-	z-index:2;
+	z-index:4;
 	display:none;
 
 }
@@ -781,7 +824,7 @@ padding-bottom:100px;
 {
 	position:absolute;
 	background-color:white;
-	z-index:1;
+	z-index:3;
 	top:0;
 	left:0;
 	display:none;
@@ -876,6 +919,36 @@ padding-bottom:100px;
 }
 
 
+.header__switch {
+  //max-width: 234px;
+  //padding: 15px 4px 15px;
+  padding:2px 2px;
+  background: $grey;
+  border-radius: 19px;
+  a {
+    text-decoration: none;
+    display:inline-block;
+    padding: 9px 10px;
+    border-radius: 19px;
+    color: $bright-red;
+    font-family: Ubuntu;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    vertical-align:middle;
+  }
+
+  .switch-active {
+    background-color: $dark-red;
+    color: $white;
+    box-shadow: -1px 0px 6px rgba(0, 0, 0, 0.4), -1px 0px 2px rgba(0, 0, 0, 0.1);
+  }
+
+}
+
+
+
+
 
 @media screen and (max-width: 1201px)
 {
@@ -899,6 +972,8 @@ padding-bottom:100px;
 	{
 		padding-left:15px;
 	}
+
+
 }
 
 @media screen and (max-width:961px)
@@ -920,6 +995,21 @@ padding-bottom:100px;
 	.header-switch
 	{
 		display:none;
+	}
+
+	.blood4 {
+		display:none;
+	}
+
+	.contact-phone
+	{
+		display:none;
+	}
+
+	.contact-phone-hidden
+	{
+		display:block;
+		margin-right:10px;
 	}
 }
 
@@ -965,20 +1055,13 @@ padding-bottom:100px;
 	{
 		margin-right:20px;
 	}
+
+
 }
 
 @media screen and (max-width:640px)
 {
-	.contact-phone
-	{
-		display:none;
-	}
 
-	.contact-phone-hidden
-	{
-		display:block;
-		padding-right:30px;
-	}
 
 	.header-logo
 	{
@@ -1046,6 +1129,15 @@ padding-bottom:100px;
 
 }
 
+
+@media screen and (max-width:568px) {
+	.header__switch {
+		order:2;
+		margin:auto;
+		margin-bottom:15px;
+	}
+}
+
 @media screen and (max-width:460px)
 {
 
@@ -1099,5 +1191,16 @@ padding-bottom:100px;
 	.footer-links
 	{
 		width:100%;
+	}
+}
+
+@media screen and (max-width:343px) {
+		.header__switch {
+		margin:0;
+		margin-bottom:15px;
+	}
+
+	.contact-phone-hidden {
+		margin:0 0 15px 15px;
 	}
 }
