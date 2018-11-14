@@ -113,7 +113,8 @@ body {
   margin: 0 5px; }
 
 .nav-menu {
-  background-color: #AF4845; }
+  background-color: #AF4845;
+  margin-bottom: 36px; }
 
 .nav-links {
   display: flex;
@@ -134,6 +135,11 @@ body {
       color: white; }
     .nav-links li a:hover {
       background-color: #DF362F; }
+  .nav-links .webinar-link {
+    background-color: white;
+    color: #DF362F; }
+  .nav-links .webinar-link:hover {
+    color: white; }
 
 .iHospital {
   display: block;
