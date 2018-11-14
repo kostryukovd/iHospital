@@ -647,8 +647,6 @@ body {
     display: block; }
   .header_user-links, .nav-menu {
     display: none; }
-  .header {
-    border-bottom: 2px solid #DF362F; }
   .event-date {
     margin-right: 20px; } }
 
